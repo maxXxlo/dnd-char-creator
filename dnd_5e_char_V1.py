@@ -3,7 +3,7 @@ import pdfrw
 from pdfrw import PdfReader
 from os import system, name
 
-#template_pdf = pdfrw.Pdfreader("./charsheet_template.pdf")
+#template_pdf = pdfrw.pdfreader("./charsheet_template.pdf")
 def clear():
     if name == 'nt':
         _ = system('cls')
@@ -12,7 +12,7 @@ def clear():
 
 clear()
 print('Welcome to maxXxlos DnD 5e Character Creator Tool')
-PlayerName = input('Enter YOUR Name:')
+playername = input('Enter YOUR Name:')
 charname = input('Enter your CHARACTERS Name:')
 charalignment = input('Whats your Characters alignment:')
 
@@ -48,8 +48,18 @@ clear()
 # HIER WERDEN DIE 6 STATS GEMACHT
 statnumbers = []
 if statroll == 'Y' or statroll == 'y':
+    # würfelalgorythmus CREDIT: WUDIN
     for x in range(6):
-        statnumbers.append(random.randint(3, 19))
+        d1=(random.randint(1,6))
+        d2=(random.randint(1,6))
+        d3=(random.randint(1,6))
+        d4=(random.randint(1,6))
+        scores = [d1, d2, d3, d4]
+        scores.sort()
+        scores.pop(0)
+        final_scores = sum(scores)
+        statnumbers.append(final_scores)
+    statnumbers.sort(reverse=True)
     print('''These are the numbers: %s\n
 Please assign them to your desired stats:''' % statnumbers)
 
