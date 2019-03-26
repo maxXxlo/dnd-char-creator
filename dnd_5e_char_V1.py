@@ -45,9 +45,8 @@ clear()
 # HIER WERDEN DIE 6 STATS GEMACHT
 statnumbers = []
 if statroll == 'Y' or statroll == 'y':
-    for x in range(24):
-        statnumbers.append([random.randint(1, 21)])
-
+    for x in range(6):
+        statnumbers.append([random.randint(3, 19)])
     print('''These are the numbers: %s\n
 Please assign them to your desired stats:''' % statnumbers)
 
@@ -101,22 +100,40 @@ def modifiercalculator(n):
     else:
         print('ERROR')
 
-
 STRmodifier = modifiercalculator(STR)
 DEXmodifier = modifiercalculator(DEX)
 CONSmodifier = modifiercalculator(CONS)
 INTmodifier = modifiercalculator(INT)
 WISmodifier = modifiercalculator(WIS)
 CHARmodifier = modifiercalculator(CHAR)
-
-print('\n')
-print(STRmodifier)
-print(DEXmodifier)
-print(CONSmodifier)
-print(INTmodifier)
-print(WISmodifier)
-print(CHARmodifier)
-
 #clear()
 
 # JETZT KOMMEN DIE KLASSEN
+if charclass == 1:
+    text
+if charclass == 2:
+    text
+if charclass == 2:
+    text
+if charclass == 3:
+    text
+if charclass == 4:
+    text
+if charclass == 5:
+    text
+if charclass == 6:
+    text
+if charclass == 7:
+    text
+if charclass == 8:
+    text
+if charclass == 9:
+    text
+if charclass == 10:
+    text
+if charclass == 11:
+    text
+if charclass == 12:
+    text
+else:
+    print("You got no class BOI")
