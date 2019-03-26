@@ -3,7 +3,8 @@ import pdfrw
 from pdfrw import PdfReader
 from os import system, name
 
-#template_pdf = pdfrw.pdfreader("./charsheet_template.pdf")
+template_pdf = PdfReader("./charsheet_template.pdf")
+
 def clear():
     if name == 'nt':
         _ = system('cls')
