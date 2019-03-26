@@ -1,4 +1,5 @@
 import random
+import pdfrw
 from os import system, name
 
 def clear():

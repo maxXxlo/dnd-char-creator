@@ -2,4 +2,6 @@
 
 #savingthrows
 sav1 = "str"
-sav2 = "str"
+sav2 = "cons"
+
+hitD = "d12"
