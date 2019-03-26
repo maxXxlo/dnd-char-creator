@@ -44,18 +44,19 @@ statroll = input('Do do you want me to roll your stats for you? (y/n):')
 clear()
 # HIER WERDEN DIE 6 STATS GEMACHT
 statnumbers = []
-if statroll == 'Y' or 'y':
-    for x in range(6):
+if statroll == 'Y' or statroll == 'y':
+    for x in range(24):
         statnumbers.append([random.randint(1, 21)])
+
     print('''These are the numbers: %s\n
 Please assign them to your desired stats:''' % statnumbers)
 
-    STR = input('Strength:')
-    DEX = input('Dexterity:')
-    CONS = input('Constitution:')
-    INT = input('Intelligence:')
-    WIS = input('Wisdom:')
-    CHAR = input('Charisma:')
+    STR = int(input('Strength:'))
+    DEX = int(input('Dexterity:'))
+    CONS = int(input('Constitution:'))
+    INT = int(input('Intelligence:'))
+    WIS = int(input('Wisdom:'))
+    CHAR = int(input('Charisma:'))
 
     print('''These are your stats:\n
 STR: %s
