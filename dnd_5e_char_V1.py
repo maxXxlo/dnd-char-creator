@@ -47,7 +47,6 @@ statnumbers = []
 if statroll == 'Y' or 'y':
     for x in range(6):
         statnumbers.append([random.randint(1, 21)])
-
     print('''These are the numbers: %s\n
 Please assign them to your desired stats:''' % statnumbers)
 
@@ -59,12 +58,12 @@ Please assign them to your desired stats:''' % statnumbers)
     CHAR = input('Charisma:')
 
     print('''These are your stats:\n
-STR: {STRhier}
-DEX: {DEXhier}
-CONS: {CONShier}
-INT: {INThier}
-WIS: {WIShier}
-CHAR: {CHARhier}''').format(STRhier=STR, DEXhier=DEX, CONShier=CONS, INThier=INT, WIShier=WIS, CHARhier=CHAR)
+STR: %s
+DEX: %s
+CONS: %s
+INT: %s
+WIS: %s
+CHAR: %s''' % (STR, DEX, CONS, INT, WIS, CHAR))
 else:
     STR = int(input('Strength:'))
     DEX = int(input('Dexterity:'))
