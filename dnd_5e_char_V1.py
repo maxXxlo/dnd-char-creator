@@ -1,13 +1,11 @@
 import random
 from os import system, name
 
-
 def clear():
     if name == 'nt':
         _ = system('cls')
     else:
         _ = system('clear')
-
 
 clear()
 print('Welcome to maxXxlos DnD 5e Character Creator Tool')
@@ -50,8 +48,8 @@ if statroll == 'Y' or 'y':
     for x in range(6):
         statnumbers.append([random.randint(1, 21)])
 
-    print('''These are the numbers: {statnumbershier}\n
-Please assign them to your desired stats:''').format(statnumbershier=statnumbers)
+    print('''These are the numbers: %s\n
+Please assign them to your desired stats:''' % statnumbers)
 
     STR = input('Strength:')
     DEX = input('Dexterity:')
@@ -65,7 +63,7 @@ STR: {STRhier}
 DEX: {DEXhier}
 CONS: {CONShier}
 INT: {INThier}
-WIS: {WIShier}  
+WIS: {WIShier}
 CHAR: {CHARhier}''').format(STRhier=STR, DEXhier=DEX, CONShier=CONS, INThier=INT, WIShier=WIS, CHARhier=CHAR)
 else:
     STR = int(input('Strength:'))
