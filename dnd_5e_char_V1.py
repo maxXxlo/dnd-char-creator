@@ -1,7 +1,9 @@
 import random
 import pdfrw
+from pdfrw import PdfReader
 from os import system, name
 
+#template_pdf = pdfrw.Pdfreader("./charsheet_template.pdf")
 def clear():
     if name == 'nt':
         _ = system('cls')
@@ -10,12 +12,12 @@ def clear():
 
 clear()
 print('Welcome to maxXxlos DnD 5e Character Creator Tool')
-playername = input('Enter YOUR Name:')
+PlayerName = input('Enter YOUR Name:')
 charname = input('Enter your CHARACTERS Name:')
 charalignment = input('Whats your Characters alignment:')
 
 clear()
-charrace = input('''What Race is your Character?
+charrace = int(input('''What Race is your Character?
 
 Dwarf [1]          Gnome [6]
 Elf [2]            Half-Elf [7]
@@ -23,10 +25,10 @@ Halfling [3]       Half-Orc [8]
 Human [4]          Tieflin [9]
 Dragonborn [5]
 
-Enter your Characters Race:''')
+Enter your Characters Race:'''))
 
 clear()
-charclass = input('''What Class is your Character?
+charclass = int(input('''What Class is your Character?
 
 Barbarian [1]   Paladin [7]
 Bard [2]        Ranger [8]
@@ -35,7 +37,7 @@ Druid [4]       Sorcerer [10]
 Fighter [5]     Warlock [11]
 Monk [6]        Wizard [12]
 
-Enter your Characters Class:''')
+Enter your Characters Class:'''))
 charlvl = 1
 charXP = 0
 
@@ -47,7 +49,7 @@ clear()
 statnumbers = []
 if statroll == 'Y' or statroll == 'y':
     for x in range(6):
-        statnumbers.append([random.randint(3, 19)])
+        statnumbers.append(random.randint(3, 19))
     print('''These are the numbers: %s\n
 Please assign them to your desired stats:''' % statnumbers)
 
@@ -137,4 +139,4 @@ if charclass == 11:
 if charclass == 12:
     text
 else:
-    print("You got no class BOI")
+    print("Error")
